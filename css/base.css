@@ -863,4 +863,18 @@ textarea {
 	text-align: center;
 }
 
+.name-box {
+    font-size: 20px; /* Adjust size as needed */
+    color: white; /* Text color */
+    background-color: black; /* Background color (black) */
+    padding: 10px 20px; /* Add some padding */
+    position: absolute; /* Position it over the black box */
+    top: 50%; /* Adjust as per your design */
+    left: 50%; /* Adjust as per your design */
+    transform: translate(-50%, -50%); /* Center the text */
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #CC005F; /* Add a shadow effect similar to your design */
+}
+
 /*# sourceMappingURL=base.css.map */
