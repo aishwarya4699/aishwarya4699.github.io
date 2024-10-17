@@ -8,119 +8,80 @@
    <meta name="author" content="Aishwarya">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-   <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
    <!-- CSS -->
    <link rel="stylesheet" href="css/base.css">
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/vendor.css">
 
-   <!-- Animate on Scroll (AOS) Library -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
    <!-- Scripts -->
    <script src="js/modernizr.js"></script>
    <script src="js/pace.min.js"></script>
-@@ -28,6 +34,103 @@
+
+   <!-- Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153937526-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-153937526-1');
+   </script>
 
    <!-- Favicons -->
    <link rel="icon" type="image/png" href="favicon.png">
-   <!-- Custom Styles -->
-   <style>
-      body {
-         font-family: 'Poppins', sans-serif;
-         background: linear-gradient(135deg, #f7f7f7, #eaeaea);
-      }
-      h1, h2, h3, h4, h5 {
-         font-weight: 600;
-         color: #333;
-      }
-      .intro-content {
-         padding: 120px 0;
-         text-align: center;
-      }
-      .intro-content h1 {
-         font-size: 48px;
-         color: #CC005F;
-      }
-      .intro-content p {
-         font-size: 24px;
-         margin-bottom: 30px;
-      }
-      .intro-social {
-         margin-top: 30px;
-      }
-      .intro-social li {
-         display: inline-block;
-         margin-right: 10px;
-      }
-      .button-primary {
-         background-color: #CC005F;
-         padding: 15px 40px;
-         border-radius: 5px;
-         font-size: 18px;
-         text-transform: uppercase;
-         transition: background-color 0.3s ease;
-      }
-      .button-primary:hover {
-         background-color: #a10047;
-         color: #fff;
-      }
-      .section-intro {
-         padding: 50px 0;
-         text-align: center;
-      }
-      .section-intro h5 {
-         color: #CC005F;
-      }
-      .skill-list, .soft-skill-list {
-         list-style: none;
-         padding: 0;
-      }
-      .skill-list li, .soft-skill-list li {
-         font-size: 18px;
-         margin-bottom: 10px;
-         display: flex;
-         align-items: center;
-      }
-      .skill-list li i, .soft-skill-list li i {
-         margin-right: 10px;
-         color: #CC005F;
-      }
-      /* Add smooth scroll and animations */
-      [data-aos] {
-         transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-      .fade-up {
-         opacity: 0;
-         transform: translateY(20px);
-      }
-      .fade-up[data-aos='fade-up'] {
-         opacity: 1;
-         transform: translateY(0);
-      }
-      .full-width-section {
-         padding: 60px 0;
-         background-color: #fff;
-      }
-   </style>
 </head>
 
 <body id="top">
-@@ -52,7 +155,7 @@
+
+   <!-- Header -->
+   <header>
+      <div class="bar">
+         <a class="menu-toggle" href="#"><span>Menu</span></a>
+         <div class="logo">
+            <a href="index.html">
+               <span class="name-box">Aishwarya Pramod</span>
+            </a>
+         </div>
+         <nav id="main-nav-wrap">
+            <ul class="main-navigation">
+               <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+               <li><a class="smoothscroll" href="#about" title="">About</a></li>
+               <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+            </ul>
+         </nav>
+      </div>
    </header>
 
    <!-- Intro Section -->
    <section id="intro">
-   <section id="intro" class="fade-up" data-aos="fade-up">
       <div class="intro-overlay"></div>
       <div class="intro-content">
          <div class="row">
-@@ -81,22 +184,22 @@
+            <div class="col-twelve">
+               <h5>Hello</h5>
+               <h1>I<span style="color: #CC005F;">'</span>m Aishwarya Pramod<span style="color: #CC005F;">.</span></h1>
+
+               <p class="intro-position">
+                  <span>Data Scientist</span>
+                  <span>Software Engineer</span>
+                  <span>Public Speaker</span>
+               </p>
+
+               <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Social Links -->
+      <ul class="intro-social">
+         <li><a href="https://www.linkedin.com/in/aishwarya-pramod/"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://www.instagram.com/aishwarya.pramod/"><i class="fa fa-instagram"></i></a></li>
+         <li><a href="https://github.com/aishwarya4699"><i class="fa fa-github"></i></a></li>
+         <li><a href="Aishwarya_GradDec2024.pdf"><i class="fa fa-file-text"></i></a></li>
+      </ul>
    </section>
 
    <!-- About Section -->
    <section id="about">
-   <section id="about" class="full-width-section fade-up" data-aos="fade-up">  
       <div class="row section-intro">
          <div class="col-twelve">
             <h5>About</h5>
@@ -128,7 +89,6 @@
             <div class="intro-info">
                <img src="images/profile-pic.png" alt="Aishwarya">
                <p class="lead">"Always <font color="#FF0077">Love</font> life <font color="#FF0077">Dream</font> big"</p>
-               <p>I am currently pursuing my Master's in Information Systems at Carnegie Mellon University. I graduated with a B.Tech in Computer Science and Engineering from PES University, specializing in Data Science. Proficient in Python, Machine Learning, NLP, Data Analytics, and Cloud Computing, I am passionate about advancing my skills and contributing to the evolving field of Data Science.</p>
             </div>
          </div>
       </div>
@@ -137,13 +97,12 @@
          <div class="col-six tab-full">
             <h3>Profile</h3>
             <p>I am currently pursuing my Master's in Information Systems at Carnegie Mellon University. I graduated with a B.Tech in Computer Science and Engineering from PES University, specializing in Data Science. Proficient in Python, Machine Learning, NLP, Data Analytics, and Cloud Computing, I am passionate about advancing my skills and contributing to the evolving field of Data Science.</p>
-      <!-- Contact Info -->
-      <div class="row contact-info">
-         <div class="col-six">
             <ul class="info-list">
                <li><strong>Full Name:</strong> <span>Aishwarya Pramod</span></li>
                <li><strong>Birth Date:</strong> <span>April 6th, 1999</span></li>
-@@ -106,33 +209,42 @@
+               <li><strong>Website:</strong> <span><a href="#">https://aishwarya4699.github.io</a></span></li>
+               <li><strong>Email:</strong> <span>aishwarya.1999@gmail.com</span></li>
+               <li><strong>Phone:</strong> <span>+1 (412) 954-7610</span></li>
             </ul>
          </div>
 
@@ -153,15 +112,6 @@
                <li><i class="fa fa-globe"></i> English: Fluent (Native)</li>
                <li><i class="fa fa-language"></i> Hindi: Fluent (Native)</li>
                <li><i class="fa fa-comment"></i> Malayalam: Intermediate</li>
-         <!-- Core Skills -->
-         <div class="col-six">
-            <h3>Core Skills</h3>
-            <ul class="skill-list">
-               <li><i class="fa fa-code"></i> Python (Advanced)</li>
-               <li><i class="fa fa-code"></i> C++ (Advanced)</li>
-               <li><i class="fa fa-database"></i> SQL (Proficient)</li>
-               <li><i class="fa fa-cogs"></i> Machine Learning & NLP</li>
-               <li><i class="fa fa-cloud"></i> Cloud Computing (AWS)</li>
             </ul>
             <ul class="skill-bars">
                <li><div class="progress percent95"><span>95%</span></div> <strong>C++</strong></li>
@@ -169,18 +119,6 @@
                <li><div class="progress percent90"><span>90%</span></div> <strong>HTML</strong></li>
                <li><div class="progress percent90"><span>90%</span></div> <strong>CSS</strong></li>
                <li><div class="progress percent90"><span>90%</span></div> <strong>C</strong></li>
-         </div>
-      </div>
-      <!-- Soft Skills -->
-      <div class="row">
-         <div class="col-six tab-full">
-            <h3>Soft Skills</h3>
-            <ul class="soft-skill-list">
-               <li><i class="fa fa-comments"></i> Communication</li>
-               <li><i class="fa fa-users"></i> Teamwork & Collaboration</li>
-               <li><i class="fa fa-lightbulb"></i> Critical Thinking</li>
-               <li><i class="fa fa-tasks"></i> Project Management</li>
-               <li><i class="fa fa-handshake"></i> Leadership</li>
             </ul>
          </div>
       </div>
@@ -193,7 +131,7 @@
       </div>
    </section>
 
-      <!-- Resume Section -->
+   <!-- Resume Section -->
    <section id="resume" class="grey-section">
       <div class="row section-intro">
          <div class="col-twelve">
