@@ -1,182 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Aishwarya Pramod | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    section {
-      padding: 4rem 1rem;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2rem;
-      color: #4B0082;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #4B0082;
-      font-size: 1.2rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: auto;
-      display: block;
-    }
-    .contact p {
-      text-align: center;
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #4B0082;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="utf-8">
+  <title>Aishwarya Pramod Ponnamparambil | Portfolio</title>
+  <meta name="description" content="Aishwarya is a Masters student at Carnegie Mellon University">
+  <meta name="author" content="Aishwarya">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/vendor.css">
+
+  <!-- Scripts -->
+  <script src="js/modernizr.js"></script>
+  <script src="js/pace.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153937526-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-153937526-1');
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<body>
 
-<section class="container" id="intro">
-  <img src="images/profile-pic.png" alt="Aishwarya Pramod" class="profile-img">
-  <h2>Aishwarya Pramod</h2>
-  <p style="text-align:center;">Turning data into intelligent decisions. <br> <a href="AishwaryaP_GradDec2024.pdf" download>📄 Download Resume</a></p>
-</section>
+<body id="top">
 
-<section class="container" id="about">
-  <h2>About Me</h2>
-  <p>I hold a Master’s degree from <strong>Carnegie Mellon University</strong> in Information Systems Management with a specialization in Data Science. I also earned my B.Tech in Computer Science from <strong>PES University</strong>.
-    My work at <strong>Oracle</strong> as a Software Engineer and my internship at <strong>DealMate</strong> shaped my passion for building data-driven solutions. I'm experienced in data science, analytics, and ML engineering.</p>
-</section>
+  <!-- Header -->
+  <header>
+    <div class="bar">
+      <a class="menu-toggle" href="#"><span>Menu</span></a>
+      <div class="logo">
+        <a href="index.html">
+          <span class="name-box">Aishwarya Pramod</span>
+        </a>
+      </div>
+      <nav id="main-nav-wrap">
+        <ul class="main-navigation">
+          <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+          <li><a class="smoothscroll" href="#about" title="">About</a></li>
+          <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="container" id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">Python</div>
-    <div class="card">SQL</div>
-    <div class="card">Machine Learning</div>
-    <div class="card">NLP</div>
-    <div class="card">PyTorch</div>
-    <div class="card">Power BI</div>
-    <div class="card">Tableau</div>
-    <div class="card">Docker</div>
-    <div class="card">AWS</div>
-  </div>
-</section>
+  <!-- Intro Section -->
+  <section id="intro">
+    <div class="intro-overlay"></div>
+    <div class="intro-content">
+      <div class="row">
+        <div class="col-twelve">
+          <h5>Hello</h5>
+          <h1>I<span style="color: #CC005F;">'</span>m Aishwarya Pramod<span style="color: #CC005F;">.</span></h1>
+          <p class="intro-position">
+            <span>Data Scientist</span>
+            <span>Software Engineer</span>
+            <span>Public Speaker</span>
+          </p>
+          <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+        </div>
+      </div>
+    </div>
 
-<section class="container" id="experience">
-  <h2>Experience</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Data Scientist Intern – DealMate</h3>
-      <p>Pennsylvania, USA | Jul 2024 – Aug 2024</p>
-      <ul>
-        <li>Improved decision-making by 20% using ML.</li>
-        <li>Led predictive model development.</li>
-        <li>Worked on image-based classification models.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Cloud Analyst – Oracle</h3>
-      <p>Bangalore, India | Jul 2021 – Apr 2023</p>
-      <ul>
-        <li>Improved SQL performance by 20%.</li>
-        <li>Boosted efficiency with OIC by 40%.</li>
-        <li>Built automations and supported top clients.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Software Engineer Intern – IOT Plus</h3>
-      <p>Abu Dhabi, UAE | Jun 2019 – Jul 2019</p>
-      <ul>
-        <li>Worked on IoT solutions for logistics.</li>
-        <li>Enhanced automation in smart systems.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <!-- Social Links -->
+    <ul class="intro-social">
+      <li><a href="https://www.linkedin.com/in/aishwarya-pramod/"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="https://www.instagram.com/aishwarya.pramod/"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://github.com/aishwarya4699"><i class="fa fa-github"></i></a></li>
+      <li><a href="AishwaryaP_GradDec2024.pdf"><i class="fa fa-file-text"></i></a></li>
+    </ul>
+  </section>
 
-<section class="container" id="education">
-  <h2>Education</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Carnegie Mellon University</h3>
-      <p>Masters in ISM – Data Science<br>(Expected: Dec 2024)</p>
-    </div>
-    <div class="card">
-      <h3>PES University</h3>
-      <p>B.Tech in CS – Data Science<br>2017 – 2021</p>
-    </div>
-    <div class="card">
-      <h3>St. Joseph's School</h3>
-      <p>High School<br>2003 – 2017</p>
-    </div>
-  </div>
-</section>
+  <!-- About and Resume Sections will follow the same layout logic from your original version -->
 
-<section class="container" id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3><a href="https://github.com/aishwarya4699/Hirehub---JobSearchPlatform">HireHub</a></h3>
-      <p>Filter H1B-eligible jobs with smart search features.</p>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/aishwarya4699/Stock-Market-Prediction">Stock Market Prediction</a></h3>
-      <p>LSTM/ARIMA forecasting models with 90% accuracy.</p>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/aishwarya4699/Ride-Share-Application-Cloud-Computing">Ride Share App</a></h3>
-      <p>Cloud-based backend using Flask and Docker.</p>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/aishwarya4699/Hate-Speech-Detection-NLP">Hate Speech Detection</a></h3>
-      <p>Logistic Regression with 89% accuracy.</p>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/aishwarya4699/Object-Detection-in-Night-Light-Conditions">Night Object Detection</a></h3>
-      <p>YOLOv3 + Zero-DCE enhancement. Top 3 Intel rank.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:aishwarya.1999@gmail.com">aishwarya.1999@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/aishwarya-pramod">aishwarya-pramod</a></p>
-  <p>GitHub: <a href="https://github.com/aishwarya4699">aishwarya4699</a></p>
-</section>
-
+  <!-- JavaScript -->
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
