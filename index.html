@@ -1,140 +1,212 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title>Aishwarya Pramod Ponnamparambil | Portfolio</title>
-   <meta name="description" content="Aishwarya is a Masters graduate from Carnegie Mellon University">
-   <meta name="author" content="Aishwarya">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- CSS -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">
-
-   <!-- Scripts -->
-   <script src="js/modernizr.js"></script>
-   <script src="js/pace.min.js"></script>
-
-   <!-- Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153937526-1"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-153937526-1');
-   </script>
-
-   <!-- Favicons -->
-   <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <title>Aishwarya Pramod | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    section {
+      padding: 4rem 1rem;
+    }
+    .about-container, .resume-container, .contact-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .profile {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .profile h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .profile p {
+      font-style: italic;
+      color: #666;
+      margin: 0.5rem 0 1rem;
+    }
+    .profile a {
+      display: inline-block;
+      margin: 0.5rem;
+      background: #4B0082;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .bio {
+      flex: 2;
+      min-width: 300px;
+    }
+    .bio h3 {
+      color: #4B0082;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .bio p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .bio h4 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .skills-list span {
+      background: #eee;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .resume-container h3, .contact-container h3 {
+      color: #4B0082;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .resume-container p {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .contact-container {
+      text-align: center;
+    }
+    .contact-container p {
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
+  </style>
 </head>
-
-<body id="top">
-
-<!-- Existing header and about sections remain unchanged -->
-
-<!-- Resume Section -->
-<section id="resume" class="grey-section">
-   <div class="row section-intro">
-      <div class="col-twelve">
-         <h5>Resume</h5>
-         <h2>My Work Experience</h2>
+<body>
+  <section id="about">
+    <div class="about-container">
+      <div class="profile">
+        <img src="images/profile-pic.png" alt="Aishwarya Pramod">
+        <h2>Aishwarya Pramod</h2>
+        <p>Turning data into intelligent decisions.</p>
+        <a href="AishwaryaP_GradDec2024.pdf" download>📄 Download Resume</a>
       </div>
-   </div>
+      <div class="bio">
+        <h3>About Me</h3>
+        <p>
+          I hold a Master’s degree from <strong>Carnegie Mellon University</strong> in Information Systems Management with a specialization in Data Science. I also earned my B.Tech in Computer Science from <strong>PES University</strong>.
+          My work at <strong>Oracle</strong> as a Software Engineer and my internship at <strong>DealMate</strong> shaped my passion for building data-driven solutions. I'm experienced in data science, analytics, and ML engineering.
+        </p>
+        <h4>Skills & Tools</h4>
+        <div class="skills-list">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Machine Learning</span>
+          <span>NLP</span>
+          <span>PyTorch</span>
+          <span>Power BI</span>
+          <span>Tableau</span>
+          <span>Docker</span>
+          <span>AWS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="resume">
+    <div class="resume-container">
+      <h3>My Work Experience</h3>
+      <div>
+        <p><strong>Data Scientist Intern</strong><br>
+        <em>DealMate, Pennsylvania, United States</em><br>
+        July 2024 – August 2024</p>
+        <ul>
+          <li>Conducted in-depth research using machine learning techniques, improving decision-making by 20%.</li>
+          <li>Led predictive model development to classify properties, improving operational efficiency.</li>
+          <li>Worked on deep learning models for property value estimation and classification based on images.</li>
+        </ul>
+        <p><strong>Cloud Analyst – Software Engineer</strong><br>
+        <em>Oracle, Bangalore, India</em><br>
+        July 2021 – April 2023</p>
+        <ul>
+          <li>Developed and optimized SQL queries for Oracle ERP modules, improving data processing time by 20%.</li>
+          <li>Spearheaded data engineering using Oracle Integration Cloud (OIC), boosting efficiency by 40%.</li>
+          <li>Automated workflows with Oracle Integration Cloud technology adapters for seamless operation.</li>
+          <li>Engaged in successful projects with AT&T, DFW, and Town of Hempstead.</li>
+          <li>Volunteered in the newsletter team and hosted events with 200+ attendees.</li>
+        </ul>
+        <p><strong>Software Engineer Intern</strong><br>
+        <em>IOT Plus Middle East LLC, Abu Dhabi, UAE</em><br>
+        June 2019 – July 2019</p>
+        <ul>
+          <li>Acquired hands-on experience in IoT smart solutions for food safety, logistics, and facilities management.</li>
+          <li>Contributed to IoT-based applications, enhancing operational efficiency and automation.</li>
+        </ul>
+      </div>
 
-   <div class="row resume-timeline">
-      <div class="col-twelve resume-header">
-         <h2>Professional Experience</h2>
-      </div>
-      <div class="col-twelve">
-         <div class="timeline-wrap">
-            <!-- DealMate Experience -->
-            <!-- Oracle Experience -->
-            <!-- IOT Plus Experience -->
-         </div>
-      </div>
-   </div>
+      <h3>Education</h3>
+      <div>
+        <p><strong>Masters Degree</strong><br>
+        <em>Carnegie Mellon University</em><br>
+        August 2023 – Present<br>
+        (Expected: December 2024)</p>
+        <p>Currently pursuing a Masters in Information Systems Management (Business Intelligence and Data Analytics) at Carnegie Mellon University.</p>
 
-   <!-- Education Section -->
-   <div class="row resume-timeline">
-      <div class="col-twelve resume-header">
-         <h2>Education</h2>
-      </div>
-      <div class="col-twelve">
-         <div class="timeline-wrap">
-            <!-- CMU -->
-            <!-- PES -->
-            <!-- School -->
-         </div>
-      </div>
-   </div>
+        <p><strong>Bachelor Degree</strong><br>
+        <em>PES University</em><br>
+        August 2017 – September 2021</p>
+        <p>B.Tech in Computer Science (CSE) with a specialization in Data Science from PES University.</p>
 
-   <!-- Projects Section -->
-   <div class="row resume-timeline">
-      <div class="col-twelve resume-header">
-         <h2>Highlighted Projects</h2>
+        <p><strong>High School</strong><br>
+        <em>St. Joseph's School</em><br>
+        2003 – 2017</p>
+        <p>Completed schooling at St. Joseph's School, Abu Dhabi, U.A.E.</p>
       </div>
-      <div class="col-twelve">
-         <div class="timeline-wrap">
-            <div class="timeline-block">
-               <div class="timeline-ico"><i class="fa fa-code"></i></div>
-               <div class="timeline-header">
-                  <h3>HireHub – Job Search Platform</h3>
-                  <p><a href="https://github.com/aishwarya4699/Hirehub---JobSearchPlatform" target="_blank">View on GitHub</a></p>
-               </div>
-               <div class="timeline-content">
-                  <p>Python tool for filtering H1B-eligible jobs with enhanced UX.</p>
-               </div>
-            </div>
-            <div class="timeline-block">
-               <div class="timeline-ico"><i class="fa fa-code"></i></div>
-               <div class="timeline-header">
-                  <h3>Stock Market Prediction</h3>
-                  <p><a href="https://github.com/aishwarya4699/Stock-Market-Prediction" target="_blank">View on GitHub</a></p>
-               </div>
-               <div class="timeline-content">
-                  <p>Used LSTM/ARIMA models to predict market trends with 90% accuracy.</p>
-               </div>
-            </div>
-            <div class="timeline-block">
-               <div class="timeline-ico"><i class="fa fa-code"></i></div>
-               <div class="timeline-header">
-                  <h3>Ride Share App</h3>
-                  <p><a href="https://github.com/aishwarya4699/Ride-Share-Application-Cloud-Computing" target="_blank">View on GitHub</a></p>
-               </div>
-               <div class="timeline-content">
-                  <p>Built Flask + Docker backend for scalable ride-pooling with DB-as-a-service.</p>
-               </div>
-            </div>
-            <div class="timeline-block">
-               <div class="timeline-ico"><i class="fa fa-code"></i></div>
-               <div class="timeline-header">
-                  <h3>Hate Speech Detection</h3>
-                  <p><a href="https://github.com/aishwarya4699/Hate-Speech-Detection-NLP" target="_blank">View on GitHub</a></p>
-               </div>
-               <div class="timeline-content">
-                  <p>Used TF-IDF + Logistic Regression with 89% accuracy and 84% recall.</p>
-               </div>
-            </div>
-            <div class="timeline-block">
-               <div class="timeline-ico"><i class="fa fa-code"></i></div>
-               <div class="timeline-header">
-                  <h3>Night Object Detection</h3>
-                  <p><a href="https://github.com/aishwarya4699/Object-Detection-in-Night-Light-Conditions" target="_blank">View on GitHub</a></p>
-               </div>
-               <div class="timeline-content">
-                  <p>Zero-DCE + YOLOv3 pipeline for low-light image enhancement. Top 3 in Intel competition.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-
-<!-- CV Download Button Fix -->
-<a href="AishwaryaP_GradDec2024.pdf" title="Download CV" class="button button-primary">Download CV</a>
-
-<!-- Footer and rest of page remain unchanged -->
+    </div>
+  </section>
+  <section id="projects">
+    <div class="resume-container">
+      <h3>Projects</h3>
+      <p><strong><a href="https://github.com/aishwarya4699/Hirehub---JobSearchPlatform" target="_blank">HireHub – Job Search Platform</a></strong><br>
+         Python tool to filter H1B-eligible job listings with user-friendly features for international students.</p>
+      <p><strong><a href="https://github.com/aishwarya4699/Stock-Market-Prediction" target="_blank">Stock Market Prediction</a></strong><br>
+         Designed LSTM/ARIMA models to forecast trends and suggest profitable trading strategies.</p>
+      <p><strong><a href="https://github.com/aishwarya4699/Ride-Share-Application-Cloud-Computing" target="_blank">Ride Share Application (Cloud)</a></strong><br>
+         Scalable backend using Flask, Docker, and RabbitMQ with DB-as-a-service architecture.</p>
+      <p><strong><a href="https://github.com/aishwarya4699/Hate-Speech-Detection-NLP" target="_blank">Hate Speech Detection</a></strong><br>
+         NLP-based detection using TF-IDF + ML models, achieving 89% accuracy and 84% recall.</p>
+      <p><strong><a href="https://github.com/aishwarya4699/Object-Detection-in-Night-Light-Conditions" target="_blank">Object Detection in Low Light</a></strong><br>
+         YOLOv3 with Zero-DCE enhancement, ranked Top 3 in Intel Vision Challenge.</p>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact-container">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:aishwarya.1999@gmail.com">aishwarya.1999@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/aishwarya-pramod">aishwarya-pramod</a></p>
+      <p>GitHub: <a href="https://github.com/aishwarya4699">aishwarya4699</a></p>
+    </div>
+  </section>
 </body>
 </html>
