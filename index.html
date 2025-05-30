@@ -3,29 +3,646 @@
 
 <head>
    <meta charset="utf-8">
-   <title>Aishwarya Pramod Ponnamparambil | Portfolio</title>
-   <meta name="description" content="Aishwarya is a Masters student at Carnegie Mellon University">
-   <meta name="author" content="Aishwarya">
+   <title>Aishwarya Pramod Ponnamparambil | Data Scientist & Software Engineer</title>
+   <meta name="description" content="Data Scientist and Software Engineer with expertise in Machine Learning, NLP, and Cloud Computing. Masters student at Carnegie Mellon University.">
+   <meta name="author" content="Aishwarya Pramod">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-   <!-- CSS -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">
+   <!-- Enhanced CSS with modern styling -->
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
 
-   <!-- Scripts -->
-   <script src="js/modernizr.js"></script>
-   <script src="js/pace.min.js"></script>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         line-height: 1.6;
+         color: #333;
+         scroll-behavior: smooth;
+      }
 
-   <!-- Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153937526-1"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-153937526-1');
-   </script>
+      /* Header Styles */
+      header {
+         position: fixed;
+         top: 0;
+         width: 100%;
+         background: rgba(255, 255, 255, 0.95);
+         backdrop-filter: blur(10px);
+         z-index: 1000;
+         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+         transition: all 0.3s ease;
+      }
 
+      .bar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 1rem 5%;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .logo .name-box {
+         font-size: 1.5rem;
+         font-weight: 700;
+         color: #CC005F;
+         text-decoration: none;
+      }
+
+      .main-navigation {
+         display: flex;
+         list-style: none;
+         gap: 2rem;
+      }
+
+      .main-navigation a {
+         text-decoration: none;
+         color: #333;
+         font-weight: 500;
+         transition: color 0.3s ease;
+         position: relative;
+      }
+
+      .main-navigation a:hover,
+      .main-navigation a.current {
+         color: #CC005F;
+      }
+
+      .main-navigation a::after {
+         content: '';
+         position: absolute;
+         bottom: -5px;
+         left: 0;
+         width: 0;
+         height: 2px;
+         background: #CC005F;
+         transition: width 0.3s ease;
+      }
+
+      .main-navigation a:hover::after,
+      .main-navigation a.current::after {
+         width: 100%;
+      }
+
+      .menu-toggle {
+         display: none;
+         background: none;
+         border: none;
+         font-size: 1.5rem;
+         cursor: pointer;
+      }
+
+      /* Hero Section */
+      #intro {
+         height: 100vh;
+         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         color: white;
+         position: relative;
+         overflow: hidden;
+      }
+
+      #intro::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,1000 1000,0 1000,1000"/></svg>');
+         animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+         0%, 100% { transform: translateY(0px); }
+         50% { transform: translateY(-20px); }
+      }
+
+      .intro-content {
+         position: relative;
+         z-index: 2;
+         max-width: 800px;
+         padding: 0 2rem;
+      }
+
+      .intro-content h5 {
+         font-size: 1.2rem;
+         margin-bottom: 1rem;
+         opacity: 0.9;
+         animation: fadeInUp 1s ease 0.2s both;
+      }
+
+      .intro-content h1 {
+         font-size: 4rem;
+         font-weight: 700;
+         margin-bottom: 2rem;
+         animation: fadeInUp 1s ease 0.4s both;
+      }
+
+      .intro-position {
+         font-size: 1.5rem;
+         margin-bottom: 3rem;
+         animation: fadeInUp 1s ease 0.6s both;
+      }
+
+      .intro-position span {
+         display: inline-block;
+         margin: 0 1rem;
+         padding: 0.5rem 1rem;
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 25px;
+         backdrop-filter: blur(10px);
+         border: 1px solid rgba(255, 255, 255, 0.2);
+         transition: transform 0.3s ease;
+      }
+
+      .intro-position span:hover {
+         transform: translateY(-5px);
+      }
+
+      @keyframes fadeInUp {
+         from {
+            opacity: 0;
+            transform: translateY(30px);
+         }
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
+      }
+
+      /* Button Styles */
+      .button {
+         display: inline-block;
+         padding: 1rem 2rem;
+         background: #CC005F;
+         color: white;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         border: 2px solid #CC005F;
+         margin: 0.5rem;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .button::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 0;
+         height: 0;
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 50%;
+         transform: translate(-50%, -50%);
+         transition: all 0.3s ease;
+      }
+
+      .button:hover::before {
+         width: 300px;
+         height: 300px;
+      }
+
+      .button:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 10px 30px rgba(204, 0, 95, 0.4);
+      }
+
+      .button.stroke {
+         background: transparent;
+         color: white;
+         border: 2px solid white;
+      }
+
+      .button.stroke:hover {
+         background: white;
+         color: #CC005F;
+      }
+
+      /* Social Links */
+      .intro-social {
+         position: absolute;
+         right: 3rem;
+         top: 50%;
+         transform: translateY(-50%);
+         list-style: none;
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+      }
+
+      .intro-social a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 50px;
+         height: 50px;
+         background: rgba(255, 255, 255, 0.1);
+         color: white;
+         border-radius: 50%;
+         text-decoration: none;
+         transition: all 0.3s ease;
+         backdrop-filter: blur(10px);
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .intro-social a:hover {
+         background: white;
+         color: #CC005F;
+         transform: scale(1.1);
+      }
+
+      /* Section Styles */
+      section {
+         padding: 6rem 5%;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .section-intro {
+         text-align: center;
+         margin-bottom: 4rem;
+      }
+
+      .section-intro h5 {
+         color: #CC005F;
+         font-size: 1rem;
+         font-weight: 600;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         margin-bottom: 1rem;
+      }
+
+      .section-intro h2 {
+         font-size: 3rem;
+         font-weight: 700;
+         color: #333;
+         margin-bottom: 2rem;
+      }
+
+      /* About Section */
+      #about {
+         background: #f8f9fa;
+      }
+
+      .about-content {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 4rem;
+         align-items: start;
+      }
+
+      .intro-info {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-bottom: 3rem;
+      }
+
+      .intro-info img {
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         object-fit: cover;
+         border: 5px solid #CC005F;
+         margin-bottom: 1rem;
+         transition: transform 0.3s ease;
+      }
+
+      .intro-info img:hover {
+         transform: scale(1.05);
+      }
+
+      .lead {
+         font-size: 1.5rem;
+         font-style: italic;
+         text-align: center;
+         color: #666;
+      }
+
+      .info-list {
+         list-style: none;
+         margin-top: 2rem;
+      }
+
+      .info-list li {
+         padding: 0.5rem 0;
+         border-bottom: 1px solid #eee;
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .info-list strong {
+         color: #CC005F;
+         min-width: 120px;
+      }
+
+      /* Skills Section */
+      .skills-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 2rem;
+         margin-top: 2rem;
+      }
+
+      .skill-category {
+         background: white;
+         padding: 2rem;
+         border-radius: 15px;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .skill-category:hover {
+         transform: translateY(-5px);
+      }
+
+      .skill-category h4 {
+         color: #CC005F;
+         font-size: 1.2rem;
+         margin-bottom: 1rem;
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+      }
+
+      .skill-tags {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 0.5rem;
+      }
+
+      .skill-tag {
+         background: #f8f9fa;
+         color: #333;
+         padding: 0.4rem 0.8rem;
+         border-radius: 20px;
+         font-size: 0.9rem;
+         border: 1px solid #e9ecef;
+         transition: all 0.3s ease;
+      }
+
+      .skill-tag:hover {
+         background: #CC005F;
+         color: white;
+         transform: scale(1.05);
+      }
+
+      /* Timeline Styles */
+      .timeline-wrap {
+         position: relative;
+         padding-left: 3rem;
+      }
+
+      .timeline-wrap::before {
+         content: '';
+         position: absolute;
+         left: 1rem;
+         top: 0;
+         bottom: 0;
+         width: 2px;
+         background: #CC005F;
+      }
+
+      .timeline-block {
+         position: relative;
+         margin-bottom: 3rem;
+         background: white;
+         border-radius: 10px;
+         padding: 2rem;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .timeline-block:hover {
+         transform: translateX(10px);
+      }
+
+      .timeline-ico {
+         position: absolute;
+         left: -3rem;
+         top: 2rem;
+         width: 2rem;
+         height: 2rem;
+         background: #CC005F;
+         color: white;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .timeline-header h3 {
+         color: #CC005F;
+         font-size: 1.5rem;
+         margin-bottom: 0.5rem;
+      }
+
+      .timeline-header h4 {
+         color: #666;
+         font-size: 1.2rem;
+         margin-bottom: 1rem;
+      }
+
+      .timeline-header p {
+         color: #999;
+         font-size: 0.9rem;
+         margin-bottom: 1rem;
+      }
+
+      /* Projects Section */
+      #projects {
+         background: #f8f9fa;
+      }
+
+      .projects-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin-top: 3rem;
+      }
+
+      .project-card {
+         background: white;
+         border-radius: 15px;
+         padding: 2rem;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+         transition: all 0.3s ease;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .project-card::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         height: 4px;
+         background: linear-gradient(90deg, #CC005F, #ff6b9d);
+      }
+
+      .project-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-card h4 {
+         color: #CC005F;
+         font-size: 1.3rem;
+         margin-bottom: 1rem;
+      }
+
+      .project-tech {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 0.5rem;
+         margin: 1rem 0;
+      }
+
+      .tech-tag {
+         background: #f8f9fa;
+         color: #CC005F;
+         padding: 0.3rem 0.8rem;
+         border-radius: 15px;
+         font-size: 0.8rem;
+         border: 1px solid #e9ecef;
+      }
+
+      /* Contact Section */
+      #contact {
+         background: #333;
+         color: white;
+      }
+
+      .contact-info {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 3rem;
+         text-align: center;
+      }
+
+      .contact-info .icon {
+         width: 80px;
+         height: 80px;
+         background: #CC005F;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 0 auto 1rem;
+         font-size: 2rem;
+      }
+
+      .contact-info h5 {
+         font-size: 1.2rem;
+         margin-bottom: 1rem;
+         color: #CC005F;
+      }
+
+      /* Footer */
+      footer {
+         background: #222;
+         color: white;
+         padding: 2rem 5%;
+         text-align: center;
+      }
+
+      .footer-social {
+         list-style: none;
+         display: flex;
+         justify-content: center;
+         gap: 1rem;
+         margin-bottom: 1rem;
+      }
+
+      .footer-social a {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 40px;
+         height: 40px;
+         background: #333;
+         color: white;
+         border-radius: 50%;
+         text-decoration: none;
+         transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+         background: #CC005F;
+         transform: translateY(-3px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+         .menu-toggle {
+            display: block;
+         }
+
+         .main-navigation {
+            display: none;
+         }
+
+         .intro-content h1 {
+            font-size: 2.5rem;
+         }
+
+         .intro-position span {
+            display: block;
+            margin: 0.5rem 0;
+         }
+
+         .intro-social {
+            position: static;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 2rem;
+            transform: none;
+         }
+
+         .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+         }
+
+         .section-intro h2 {
+            font-size: 2rem;
+         }
+
+         section {
+            padding: 4rem 5%;
+         }
+      }
+
+      /* Utility Classes */
+      .text-center { text-align: center; }
+      .mb-2 { margin-bottom: 2rem; }
+      .mt-2 { margin-top: 2rem; }
+
+      /* Animations */
+      .fade-in {
+         opacity: 0;
+         transform: translateY(30px);
+         transition: all 0.6s ease;
+      }
+
+      .fade-in.visible {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   </style>
+
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
    <!-- Favicons -->
    <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -35,7 +652,7 @@
    <!-- Header -->
    <header>
       <div class="bar">
-         <a class="menu-toggle" href="#"><span>Menu</span></a>
+         <a class="menu-toggle" href="#"><span>☰</span></a>
          <div class="logo">
             <a href="index.html">
                <span class="name-box">Aishwarya Pramod</span>
@@ -43,9 +660,11 @@
          </div>
          <nav id="main-nav-wrap">
             <ul class="main-navigation">
-               <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-               <li><a class="smoothscroll" href="#about" title="">About</a></li>
-               <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
+               <li><a class="smoothscroll current" href="#intro">Home</a></li>
+               <li><a class="smoothscroll" href="#about">About</a></li>
+               <li><a class="smoothscroll" href="#resume">Experience</a></li>
+               <li><a class="smoothscroll" href="#projects">Projects</a></li>
+               <li><a class="smoothscroll" href="#contact">Contact</a></li>
             </ul>
          </nav>
       </div>
@@ -53,30 +672,30 @@
 
    <!-- Intro Section -->
    <section id="intro">
-      <div class="intro-overlay"></div>
       <div class="intro-content">
          <div class="row">
             <div class="col-twelve">
-               <h5>Hello</h5>
-               <h1>I<span style="color: #CC005F;">'</span>m Aishwarya Pramod<span style="color: #CC005F;">.</span></h1>
+               <h5>Hello, I'm</h5>
+               <h1>Aishwarya Pramod<span style="color: #fff;">.</span></h1>
 
                <p class="intro-position">
-                  <span>Data Scientist</span>
-                  <span>Software Engineer</span>
-                  <span>Public Speaker</span>
+                  <span>🔬 Data Scientist</span>
+                  <span>💻 Software Engineer</span>
+                  <span>🎤 Public Speaker</span>
                </p>
 
-               <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+               <a class="button stroke smoothscroll" href="#about">Discover My Journey</a>
+               <a class="button" href="AishwaryaP_GradDec2024.pdf">Download Resume</a>
             </div>
          </div>
       </div>
 
       <!-- Social Links -->
       <ul class="intro-social">
-         <li><a href="https://www.linkedin.com/in/aishwarya-pramod/"><i class="fa fa-linkedin"></i></a></li>
-         <li><a href="https://www.instagram.com/aishwarya.pramod/"><i class="fa fa-instagram"></i></a></li>
-         <li><a href="https://github.com/aishwarya4699"><i class="fa fa-github"></i></a></li>
-         <li><a href="AishwaryaP_GradDec2024.pdf"><i class="fa fa-file-text"></i></a></li>
+         <li><a href="https://www.linkedin.com/in/aishwarya-pramod/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+         <li><a href="https://github.com/aishwarya4699" title="GitHub"><i class="fab fa-github"></i></a></li>
+         <li><a href="https://www.instagram.com/aishwarya.pramod/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+         <li><a href="mailto:aishwarya.1999@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
       </ul>
    </section>
 
@@ -84,101 +703,186 @@
    <section id="about">
       <div class="row section-intro">
          <div class="col-twelve">
-            <h5>About</h5>
-            <h2>Let me introduce myself.</h2>
+            <h5>About Me</h5>
+            <h2>Let me introduce myself</h2>
             <div class="intro-info">
-               <img src="images/profile-pic.png" alt="Aishwarya">
-               <p class="lead">"Always <font color="#FF0077">Love</font> life <font color="#FF0077">Dream</font> big"</p>
+               <img src="https://via.placeholder.com/200x200/CC005F/ffffff?text=AP" alt="Aishwarya Pramod">
+               <p class="lead">"Always <span style="color: #CC005F;">Love</span> life, <span style="color: #CC005F;">Dream</span> big"</p>
             </div>
          </div>
       </div>
 
-      <div class="row about-content">
-         <div class="col-twelve tab-full">
-            <h3>Profile</h3>
-            <p>I hold a Master's degree from Carnegie Mellon University and a B.Tech in Computer Science and Engineering from PES University, with a specialization in Data Science. Proficient in Python, Machine Learning, NLP, Data Analytics, and Cloud Computing, I am passionate about leveraging data-driven insights to solve complex problems. I am eager to further enhance my expertise and contribute to the ever-evolving field of Data Science.</p>
+      <div class="about-content">
+         <div class="col-six">
+            <h3>🎯 My Story</h3>
+            <p>I'm a passionate Data Scientist and Software Engineer with a Master's degree from Carnegie Mellon University and a B.Tech in Computer Science from PES University. My expertise spans across Python, Machine Learning, NLP, Data Analytics, and Cloud Computing.</p>
+            
+            <p>I thrive on transforming complex data into actionable insights and building scalable solutions that drive real-world impact. My journey has taken me from developing IoT solutions in the UAE to optimizing enterprise systems at Oracle, and now pursuing cutting-edge research in business intelligence.</p>
+
             <ul class="info-list">
-               <li><strong>Full Name:</strong> <span>Aishwarya Pramod</span></li>
-               <li><strong>Birth Date:</strong> <span>April 6th, 1999</span></li>
-               <li><strong>Website:</strong> <span><a href="#">https://aishwarya4699.github.io</a></span></li>
+               <li><strong>Full Name:</strong> <span>Aishwarya Pramod Ponnamparambil</span></li>
+               <li><strong>Location:</strong> <span>Pennsylvania, United States</span></li>
                <li><strong>Email:</strong> <span>aishwarya.1999@gmail.com</span></li>
                <li><strong>Phone:</strong> <span>+1 (412) 954-7610</span></li>
+               <li><strong>Website:</strong> <span>aishwarya4699.github.io</span></li>
             </ul>
+         </div>
+
+         <div class="col-six">
+            <h3>💻 Technical Skills</h3>
+            <div class="skills-grid">
+               <div class="skill-category">
+                  <h4><i class="fas fa-code"></i> Programming</h4>
+                  <div class="skill-tags">
+                     <span class="skill-tag">Python</span>
+                     <span class="skill-tag">C</span>
+                     <span class="skill-tag">C++</span>
+                     <span class="skill-tag">R</span>
+                     <span class="skill-tag">SQL</span>
+                  </div>
+               </div>
+               
+               <div class="skill-category">
+                  <h4><i class="fas fa-robot"></i> AI/ML</h4>
+                  <div class="skill-tags">
+                     <span class="skill-tag">Machine Learning</span>
+                     <span class="skill-tag">Deep Learning</span>
+                     <span class="skill-tag">NLP</span>
+                     <span class="skill-tag">Time Series</span>
+                     <span class="skill-tag">Computer Vision</span>
+                  </div>
+               </div>
+               
+               <div class="skill-category">
+                  <h4><i class="fas fa-cloud"></i> Cloud & Tools</h4>
+                  <div class="skill-tags">
+                     <span class="skill-tag">AWS</span>
+                     <span class="skill-tag">Oracle Cloud</span>
+                     <span class="skill-tag">Docker</span>
+                     <span class="skill-tag">Tableau</span>
+                     <span class="skill-tag">Power BI</span>
+                  </div>
+               </div>
+               
+               <div class="skill-category">
+                  <h4><i class="fas fa-database"></i> Data & Analytics</h4>
+                  <div class="skill-tags">
+                     <span class="skill-tag">Pandas</span>
+                     <span class="skill-tag">NumPy</span>
+                     <span class="skill-tag">Scikit-learn</span>
+                     <span class="skill-tag">Statistics</span>
+                     <span class="skill-tag">Data Visualization</span>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
 
-      <div class="row button-section">
-         <div class="col-twelve">
-            <a href="Aishwarya_GradDec2024.pdf" title="Download CV" class="button button-primary">Download CV</a>
-         </div>
+      <div class="row button-section text-center mt-2">
+         <a href="#contact" class="button stroke">Let's Connect</a>
+         <a href="AishwaryaP_GradDec2024.pdf" class="button">Download Resume</a>
       </div>
    </section>
 
-  <!-- Resume Section -->
-   <section id="resume" class="grey-section">
+   <!-- Resume Section -->
+   <section id="resume">
       <div class="row section-intro">
          <div class="col-twelve">
-            <h5>Resume</h5>
-            <h2>My Work Experience</h2>
+            <h5>Experience</h5>
+            <h2>My Professional Journey</h2>
          </div>
       </div>
 
       <div class="row resume-timeline">
-         <div class="col-twelve resume-header">
-            <h2>Professional Experience</h2>
-         </div>
-
          <div class="col-twelve">
+            <h3 style="text-align: center; margin-bottom: 3rem; color: #CC005F;">💼 Professional Experience</h3>
             <div class="timeline-wrap">
                <!-- DealMate -->
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-chart-line"></i></div>
                   <div class="timeline-header">
                      <h3>Data Scientist Intern</h3>
-                     <h4>DealMate, Pennsylvania, United States</h4>
+                     <h4>DealMate | Pennsylvania, United States</h4>
                      <p>July 2024 – August 2024</p>
                   </div>
                   <div class="timeline-content">
-                     <p>
-                        - Conducted in-depth research using machine learning techniques, improving decision-making by 20%.<br>
-                        - Led predictive model development to classify properties, improving operational efficiency.<br>
-                        - Worked on deep learning models for property value estimation and classification based on images.
-                     </p>
+                     <p>🔍 Conducted in-depth research using advanced machine learning techniques, resulting in 20% improvement in decision-making processes</p>
+                     <p>🏠 Led development of predictive models for property classification, significantly enhancing operational efficiency</p>
+                     <p>🤖 Implemented deep learning models for property value estimation and image-based classification</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- IIT Madras Training -->
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-brain"></i></div>
+                  <div class="timeline-header">
+                     <h3>Data Scientist and AI Training</h3>
+                     <h4>IIT Madras & Intellipaat | India</h4>
+                     <p>January 2023 – July 2023</p>
+                  </div>
+                  <div class="timeline-content">
+                     <p>🎓 Completed intensive applied learning program focused on Data Science, Machine Learning, and Artificial Intelligence</p>
+                     <p>📊 Worked on real-world projects and case studies simulating industry challenges in HR analytics and NLP</p>
+                     <p>📈 Designed interactive dashboards for enhanced user experience using Tableau</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Data Science</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">NLP</span>
+                     </div>
                   </div>
                </div>
 
                <!-- Oracle -->
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-cloud"></i></div>
                   <div class="timeline-header">
-                     <h3>Cloud Analyst – Software Engineer</h3>
-                     <h4>Oracle, Bangalore, India</h4>
-                     <p>July 2021 – April 2023</p>
+                     <h3>Data Engineer – Cloud Analyst</h3>
+                     <h4>Oracle | Bangalore, India</h4>
+                     <p>July 2021 – May 2023</p>
                   </div>
                   <div class="timeline-content">
-                     <p>
-                        - Developed and optimized SQL queries for Oracle ERP modules, improving data processing time by 20%.<br>
-                        - Spearheaded data engineering using Oracle Integration Cloud (OIC), boosting efficiency by 40%.<br>
-                        - Automated workflows with Oracle Integration Cloud technology adapters for seamless operation.<br>
-                        - Engaged in successful projects with AT&T, DFW, and Town of Hempstead.<br>
-                        - Volunteered in the newsletter team and hosted events with 200+ attendees.
-                     </p>
+                     <p>⚡ Developed and optimized SQL queries for Oracle ERP modules, achieving 20% improvement in data processing time across General Ledger, Account Payables, and Procurement</p>
+                     <p>🚀 Spearheaded data engineering initiatives using Oracle Integration Cloud (OIC), developing financial reports and scalable data models that boosted efficiency by 40%</p>
+                     <p>🏆 Organized mentorship program for new hires and awarded the Oracle Star Award</p>
+                     <p>🤝 Successfully managed projects for major clients: AT&T, DFW Airport, and Town of Hempstead</p>
+                     <p>📊 Converted data into actionable insights, enhancing decision-making through dashboards and reports</p>
+                     <p>📰 Active volunteer in newsletter team and hosted 2 events with 200+ attendees</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">Oracle Cloud</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Data Engineering</span>
+                        <span class="tech-tag">ERP Systems</span>
+                        <span class="tech-tag">Financial Reporting</span>
+                     </div>
                   </div>
                </div>
 
                <!-- IOT Plus -->
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-briefcase"></i></div>
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-microchip"></i></div>
                   <div class="timeline-header">
                      <h3>Software Engineer Intern</h3>
-                     <h4>IOT Plus Middle East LLC, Abu Dhabi, UAE</h4>
+                     <h4>IOT Plus Middle East LLC | Abu Dhabi, UAE</h4>
                      <p>June 2019 – July 2019</p>
                   </div>
                   <div class="timeline-content">
-                     <p>
-                        - Acquired hands-on experience in IoT smart solutions for food safety, logistics, and facilities management.<br>
-                        - Contributed to IoT-based applications, enhancing operational efficiency and automation.
-                     </p>
+                     <p>🌐 Completed comprehensive training and acquired expertise in IoT Smart solutions for food safety and logistics using sensor data</p>
+                     <p>📱 Gained hands-on experience in developing IoT-based applications for enhanced operational efficiency</p>
+                     <div class="project-tech">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Smart Solutions</span>
+                        <span class="tech-tag">Sensor Data</span>
+                        <span class="tech-tag">Food Safety</span>
+                        <span class="tech-tag">Logistics</span>
+                     </div>
                   </div>
                </div>
             </div>
@@ -186,46 +890,33 @@
       </div>
 
       <!-- Education Section -->
-      <div class="row resume-timeline">
-         <div class="col-twelve resume-header">
-            <h2>Education</h2>
-         </div>
-
+      <div class="row resume-timeline mt-2">
          <div class="col-twelve">
+            <h3 style="text-align: center; margin-bottom: 3rem; color: #CC005F;">🎓 Education</h3>
             <div class="timeline-wrap">
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-university"></i></div>
                   <div class="timeline-header">
-                     <h3>Masters Degree</h3>
-                     <p>August 2023 - Present (Expected: December 2024)</p>
+                     <h3>Master of Science in Information Systems Management</h3>
+                     <p>August 2023 - December 2024 (Expected)</p>
                   </div>
                   <div class="timeline-content">
-                     <h4><a href="https://www.cmu.edu/">Carnegie Mellon University</a></h4>
-                     <p>Currently pursuing a Masters in Information Systems Management (Business Intelligence and Data Analytics) at Carnegie Mellon University.</p>
+                     <h4><a href="https://www.cmu.edu/" style="color: #CC005F;">Carnegie Mellon University, Pittsburgh, PA</a></h4>
+                     <p>🎯 Specialization: Business Intelligence and Data Analytics</p>
+                     <p>📚 Relevant Coursework: Python, Machine Learning, Statistics, Distributed Systems, Data Science, Accounting, Economics</p>
                   </div>
                </div>
 
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
+               <div class="timeline-block fade-in">
+                  <div class="timeline-ico"><i class="fas fa-graduation-cap"></i></div>
                   <div class="timeline-header">
-                     <h3>Bachelor Degree</h3>
-                     <p>August 2017 - September 2021</p>
+                     <h3>Bachelor of Technology - Computer Science and Engineering</h3>
+                     <p>August 2017 - November 2021</p>
                   </div>
                   <div class="timeline-content">
-                     <h4><a href="https://www.pes.edu/">PES University</a></h4>
-                     <p>B.Tech in Computer Science (CSE) with a specialization in Data Science from PES University.</p>
-                  </div>
-               </div>
-
-               <div class="timeline-block">
-                  <div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>
-                  <div class="timeline-header">
-                     <h3>High School</h3>
-                     <p>2003 - 2017</p>
-                  </div>
-                  <div class="timeline-content">
-                     <h4><a href="https://www.stjosephsschool.ae/">St. Joseph's School</a></h4>
-                     <p>Completed schooling at St. Joseph's School, Abu Dhabi, U.A.E.</p>
+                     <h4><a href="https://www.pes.edu/" style="color: #CC005F;">PES University, Bangalore, India</a></h4>
+                     <p>🔬 Specialization: Data Science</p>
+                     <p>📚 Relevant Courses: Data Structures, Algorithms, Data Science, Machine Learning, Natural Language Processing, Python, DBMS</p>
                   </div>
                </div>
             </div>
@@ -233,63 +924,69 @@
       </div>
    </section>
 
-   <!-- Contact Section -->
-   <section id="contact">
-      <div class="row contact-info">
-         <div class="col-four tab-full">
-            <div class="icon">
-               <i class="icon-pin"></i>
-            </div>
-            <h5>Where to find me</h5>
-            <p>Pennsylvania, United States</p>
-         </div>
-
-         <div class="col-four tab-full">
-            <div class="icon">
-               <i class="icon-mail"></i>
-            </div>
-            <h5>Email Me At</h5>
-            <p>aishwarya.1999@gmail.com</p>
-         </div>
-
-         <div class="col-four tab-full">
-            <div class="icon">
-               <i class="icon-phone"></i>
-            </div>
-            <h5>Call Me At</h5>
-            <p>+1 (412) 954-7610</p>
+   <!-- Projects Section -->
+   <section id="projects">
+      <div class="row section-intro">
+         <div class="col-twelve">
+            <h5>Portfolio</h5>
+            <h2>Featured Projects</h2>
          </div>
       </div>
-   </section>
 
-   <!-- Footer -->
-   <footer>
-      <div class="row">
-         <div class="col-six tab-full pull-right social">
-            <ul class="footer-social">
-               <li><a href="https://www.linkedin.com/in/aishwarya-pramod/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://www.instagram.com/aishwarya.pramod/"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://github.com/aishwarya4699"><i class="fa fa-github"></i></a></li>
-               <li><a href="AishwaryaP_GradDec2024.pdf"><i class="fa fa-file-text"></i></a></li>
-            </ul>
+      <div class="projects-grid">
+         <div class="project-card fade-in">
+            <h4>📈 Stock Market Prediction</h4>
+            <p>Developed a comprehensive predictive framework utilizing various machine learning models to forecast market trends and trading strategies.</p>
+            <p><strong>Key Achievement:</strong> LSTM model achieved 90% accuracy in market predictions</p>
+            <div class="project-tech">
+               <span class="tech-tag">Python</span>
+               <span class="tech-tag">LSTM</span>
+               <span class="tech-tag">Machine Learning</span>
+               <span class="tech-tag">Time Series</span>
+               <span class="tech-tag">Financial Analytics</span>
+            </div>
+            <a href="#" class="button" style="margin-top: 1rem;">View on GitHub</a>
          </div>
 
-         <div class="col-eight tab-full">
-            <div id="go-top">
-               <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+         <div class="project-card fade-in">
+            <h4>🚗 Ride Share Application</h4>
+            <p>Collaboratively built a cloud-based backend service for a ride-pooling app using Flask RestfulAPI and SQLAlchemy, ensuring scalability and high availability.</p>
+            <p><strong>Key Features:</strong> Load balancer implementation with AMQP and RabbitMQ for fault tolerance</p>
+            <div class="project-tech">
+               <span class="tech-tag">Flask</span>
+               <span class="tech-tag">SQLAlchemy</span>
+               <span class="tech-tag">RestfulAPI</span>
+               <span class="tech-tag">RabbitMQ</span>
+               <span class="tech-tag">Cloud Architecture</span>
             </div>
+            <a href="#" class="button" style="margin-top: 1rem;">View on GitHub</a>
+         </div>
+
+         <div class="project-card fade-in">
+            <h4>💬 Hate Speech Detection</h4>
+            <p>Applied bag of words and TF-IDF techniques, trained 5 machine learning models and performed comprehensive comparative analysis.</p>
+            <p><strong>Best Performance:</strong> TF-IDF with logistic regression achieved 89% accuracy and 84% recall</p>
+            <div class="project-tech">
+               <span class="tech-tag">NLP</span>
+               <span class="tech-tag">TF-IDF</span>
+               <span class="tech-tag">Logistic Regression</span>
+               <span class="tech-tag">Text Classification</span>
+               <span class="tech-tag">Python</span>
+            </div>
+            <a href="#" class="button" style="margin-top: 1rem;">View on GitHub</a>
+         </div>
+
+         <div class="project-card fade-in">
+            <h4>🏆 Object Detection in Night Light Conditions</h4>
+            <p>Created an advanced object detection model for low-light conditions using Zero-DCE for image enhancement followed by YOLOv3 detection.</p>
+            <p><strong>Achievement:</strong> Ranked among top three in Intel Competition</p>
+            <div class="project-tech">
+               <span class="tech-tag">Computer Vision</span>
+               <span class="tech-tag">YOLOv3</span>
+               <span class="tech-tag">PyTorch</span>
+               <span class="tech-tag">Zero-DCE</span>
+               <span class="tech-tag">Image Enhancement</span>
+            </div>
+            <a href="#" class="button" style="margin-top: 1rem;">View on GitHub</a>
          </div>
       </div>
-   </footer>
-
-   <div id="preloader">
-      <div id="loader"></div>
-   </div>
-
-   <!-- Java Script -->
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
-
-</body>
-</html>
